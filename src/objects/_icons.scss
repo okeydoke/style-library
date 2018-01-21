@@ -1,0 +1,15 @@
+.#{$ns}-icon {
+	vertical-align: middle;
+	// medium sized by default
+	height: 2rem;
+	width: 2rem;
+}
+	.#{$ns}-icon--small{
+		height: 1.25rem;
+		width: 1.25rem;
+	}
+
+	.#{$ns}-icon--large{
+		height: 3rem;
+		width: 3rem;
+	}

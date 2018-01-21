@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "name": "@okeydoke/style-library",
+  "main": "src/index.scss",
+  "description": "OKeydoke style library",
+  "author": "Jesse Lamb <jesse@okeydoke.net>",
+  "license": "Copyright Jesse Lamb",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/okeydoke/style-library.git"
+  }
+}

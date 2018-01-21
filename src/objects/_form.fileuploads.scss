@@ -1,0 +1,94 @@
+.#{$ns}-fileupload{
+	display: inline-block;
+	margin: 1rem 0.5rem 0 0;
+}
+	.#{$ns}-fileupload--label{
+		// pointer-events: none;
+		display: inline-flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		padding: 0.7rem;
+		fill: $color-grey-med;
+		text-align: center;
+
+		vertical-align: middle;
+		border-radius: $border-radius;
+		border: 1px solid $color-grey-light;
+		width: 6rem;
+		height: 6rem;
+	}
+
+	/* Can't use display:none/visibility:hidden as it removes the element from  
+	   tab order which will affect screen readers. Setting width/height to 0
+	   has similar issues so use the following */
+	.#{$ns}-fileupload--input{
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+	}
+	.#{$ns}-fileupload--thumbnails{
+		height: 100%;
+		width: 100%;
+		display: inline-block;
+
+		vertical-align: middle;
+		border-radius: $border-radius;
+		border: 1px solid $color-grey-light;
+		width: 6rem;
+		height: 6rem;
+	}
+		.#{$ns}-fileupload--thumbnail{
+			position: relative;
+			height: 100%;
+			width: 100%;
+			display: inline-block;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			vertical-align: middle;
+			font-size: 11px;
+			text-overflow: ellipsis;
+			word-break: keep-all;
+			border-radius: $border-radius;
+		}
+		.#{$ns}-fileupload--remove {
+			position: absolute;
+			top: -0.75rem;
+			right: -0.75rem;
+			background-color: #fff;
+			border-radius: 50%;
+			z-index: 1;
+		}
+			.#{$ns}-fileupload--thumbnail-label {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				text-overflow: ellipsis;
+				text-align: center;
+				overflow: hidden;
+				width: 100%;
+				color: $color-grey-dark;
+				background-color: rgba(255, 255, 255, 0.7);
+				border-radius: inherit;
+			}
+			.#{$ns}-fileupload--progress{
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+	.#{$ns}-fileupload--errors{
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		list-style: none;
+		vertical-align: middle;
+	}
+		.#{$ns}-fileupload--error{
+			padding: 2px 0 2px 4px;
+		}

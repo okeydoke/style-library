@@ -1,0 +1,36 @@
+.#{$ns}-textfield--label{
+	@include input-label;
+}
+
+.#{$ns}-textfield--input{
+	@include input-field;
+}
+
+.#{$ns}-textfield--input:invalid{
+	outline: none;
+}
+	.#{$ns}-textfield--input:focus:invalid {
+		// border: 1px solid $color-red;
+		// color: $color-red;
+	}
+
+
+.#{$ns}-textarea{
+	width: 100%;
+}
+
+	.#{$ns}-textarea--label{
+		@include input-label;
+	}
+
+	.#{$ns}-textarea--input{
+		@include input-border;
+		background-color: $color-white;
+		color: $color-grey-dark;
+		display: block;
+		font-family: $font-family;
+		font-size: $font-size-body;
+		min-height: 6rem;
+		width: 100%;
+		padding: 2px 5px;
+	}

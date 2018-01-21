@@ -1,0 +1,71 @@
+@mixin progressBarBorderRadius {
+	border-radius: 2px;
+}
+
+@mixin progressBarBackground {
+	background-color: $color-grey-light;
+}
+
+@mixin progressBarForeground {
+	background-color: $color-blue;
+}
+
+@mixin progressBarHeight {
+	height: 12px;
+}
+
+.#{$ns}-progress[value] {
+	@include progressBarBorderRadius;
+	@include progressBarBackground;
+	@include progressBarHeight;
+
+	// add all these prefixes manually as autoprefixer doesn't add these
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	border: none;
+	width: 100%;
+}
+
+// IE specifc settings
+.#{$ns}-progress[value]::-ms-fill {
+	@include progressBarForeground;
+}
+
+// Webkit specific settings
+.#{$ns}-progress[value]::-webkit-progress-bar {
+	@include progressBarBorderRadius;
+	@include progressBarBackground;
+}
+	// this is the 'actual' bar
+	.#{$ns}-progress[value]::-webkit-progress-value {
+		@include progressBarForeground;
+		@include progressBarBorderRadius;
+	}
+
+// firefox specific styling
+.#{$ns}-progress[value]::-moz-progress-bar {
+	@include progressBarBorderRadius;
+	@include progressBarForeground;
+}
+
+// Fallback  settings
+.#{$ns}-progress-fallback {
+	@include progressBarBorderRadius;
+	@include progressBarBackground;
+	@include progressBarHeight;
+
+	margin: 0.25rem auto;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+	.#{$ns}-progress-fallback--label {
+		@include progressBarBorderRadius;
+		@include progressBarForeground;
+		@include progressBarHeight;
+
+		display: block;
+		text-indent: -9999px;
+	}

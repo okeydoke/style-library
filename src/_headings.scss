@@ -1,0 +1,38 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-family;
+}
+
+h1 {
+	font-size: $font-size-h1;
+	font-weight: bold;
+}
+h2 {
+	padding: 25px 15px 15px 15px;
+	line-height: 18px;
+	font-size: $font-size-h2;
+	font-weight: bold;
+}
+h3 {
+	padding: 35px 15px 10px;
+	font-weight: bold;
+}
+h4 {
+	padding: 20px 15px 10px;
+}
+
+// this is kinda weird having the headline2 be bigger than headline1, which 
+// breaks from the standard h1, h2 convention of bigger -> small but I got these
+// values from UX design document on confluence. 
+// TODO clarify this with UX team
+.#{$ns}-headline2 {
+	font-size: $font-size-headline2;
+}
+
+.#{$ns}-headline1 {
+	font-size: $font-size-headline1;
+}

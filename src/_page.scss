@@ -1,0 +1,12 @@
+.#{$ns}-page-body {
+	width: 1030px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// prevents the page from having scroll bars
+.#{$ns}-prevent-scroll {
+	height: 100% !important;
+	overflow: hidden !important;
+	position: fixed; // this addresses a bug in firefox mobile where you can still scroll
+}

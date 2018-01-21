@@ -1,0 +1,13 @@
+label {
+	user-select: none;
+	cursor: pointer;
+}
+
+.#{$ns}-label{
+	/* this may be a little hacky but solves issue of labels hover state (cursor)
+	   show in white space along the horizontal plane of the input. 
+	   See `input-label` mixin for corresponding child element styling */
+	display: table;
+	margin-top: 1rem;
+	// width: 100%;
+}

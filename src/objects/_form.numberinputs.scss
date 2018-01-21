@@ -1,0 +1,30 @@
+.#{$ns}-numberfield{
+
+}
+	.#{$ns}-numberfield--label{
+		@include input-label;
+	}
+
+	.#{$ns}-numberfield--input {
+		@include input-field;
+		vertical-align: middle;
+	}
+		.#{$ns}-numberfield--input:invalid{
+			outline: none;
+		}
+
+		.#{$ns}-numberfield--input--centered {
+			text-align: center;
+			padding-left: 0;
+		}
+
+	.#{$ns}-numberfield--button{
+		fill: $color-white;
+		display: inline-block;
+		vertical-align: middle;
+		border-radius: $border-radius;
+		padding: 6px;
+		background-color:  $color-grey-med;
+		margin: 0 4px;
+		cursor: pointer;
+	}

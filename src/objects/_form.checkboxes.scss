@@ -1,0 +1,42 @@
+// for accessibility, this adds an outline to the checkbox when it has focus
+// important when navigating via keyboard
+.#{$ns}-checkbox:focus {
+	outline: none;
+}
+	.#{$ns}-checkbox:focus .#{$ns}-checkbox--icon{
+		outline: 1px dotted $color-grey;
+		outline-offset: 1px;
+	}
+
+.#{$ns}-checkbox--input {
+	display: none;
+}
+	.#{$ns}-checkbox--input:checked ~ .#{$ns}-checkbox--label path {
+		fill: $color-blue;
+	}
+	.#{$ns}-checkbox--input:checked ~ .#{$ns}-checkbox--label .#{$ns}-checkbox--icon {
+		background-color: $color-grey-light;
+	}
+
+	.#{$ns}-checkbox--icon {
+		position: relative;
+		top: 2px;
+		width: 15px;
+		height: 15px;
+		border: 1px solid $color-grey;
+		box-sizing: border-box;
+		transition: background border $transition-duration-standard ease-in-out;
+		background: no-repeat 0 0 $color-grey-light;
+		border-radius: 2px;
+		margin-right: 5px;
+	}
+	.#{$ns}-checkbox--icon path{
+		fill: rgba( 0, 0, 0, 0);
+		transition: fill $transition-duration-fast ease-in;
+	}
+
+	.#{$ns}-checkbox--label {
+		position: relative;
+		display: inline-block;
+		line-height: 15px;
+	}

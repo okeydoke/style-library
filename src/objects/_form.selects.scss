@@ -1,0 +1,26 @@
+.#{$ns}-select{
+
+}
+	.#{$ns}-select--label{
+		@include input-label;
+	}
+	.#{$ns}-select--input{
+		@include input-border;
+		height: 30px;
+		background-color: $color-white;
+		color: $color-grey-dark;
+		display: inline-block;
+		padding-right: 2px;
+		// this is specific, but seems to work well in my test case for modal's 
+		// Basically subtracts the viewport with enough space to make sure no 
+		// horizontal scrolling in a modal window 
+		max-width: calc(100vw - 5rem); 
+	}
+
+
+// we can't really style an option element but these settings make it a bit nicer
+.#{$ns}-option {
+	background-color: $color-white;
+	color: $color-grey-dark;
+	padding: 5px 2px;
+}
